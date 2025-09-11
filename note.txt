@@ -1,0 +1,3 @@
+kummarineelaveni7_db_user
+password:Z8RKdouIzoKDYlSC
+connection string: ongodb+srv://kummarineelaveni7_db_user:<db_password>@task-manager.odk53lh.mongodb.net/
