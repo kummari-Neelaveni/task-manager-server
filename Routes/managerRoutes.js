@@ -8,9 +8,9 @@ const{
 =require("../validators/authvalidators.js")
 
 
-Router.get("/getAllEmployeeList",tokenValidator,validateMiddleware,checkAuth,checkRole("managers"),getAllEmployees)
-Router.post("/create",tokenValidator,validateMiddleware,checkAuth,checkRole("managers"),creteTicket);//task createing to managers
-Router.get("/allTickets",tokenValidator,validateMiddleware,checkAuth,checkRole("managers"),getAllTicket);
-Router.get("/getTicketById/:id",tokenValidator,validateMiddleware,checkAuth,checkRole("managers"),getTicketById);
+Router.get("/getAllEmployeeList",tokenValidator,validateMiddleware,checkAuth,checkRole("manager"),getAllEmployees)
+Router.post("/create",tokenValidator,validateMiddleware,checkAuth,checkRole("manager"),creteTicket);//task createing to managers
+Router.get("/allTickets",tokenValidator,validateMiddleware,checkAuth,checkRole("manager"),getAllTicket);
+Router.get("/getTicketById/:id",tokenValidator,validateMiddleware,checkAuth,checkRole("manager"),getTicketById);
 
 module.exports=Router;
