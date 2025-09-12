@@ -3,7 +3,7 @@ const bcryptjs=require("bcryptjs")
 const{userModel}=require("../models/authmodels.js")
 const {generateToken}=require("../Utils/token.js")
 
-const signupcontroller=async(req,res)=>{
+const signupcontroller=async(req,res,next)=>{
    try{
     const {name,username,email,password}=req.body;
     const hashpassword= await bcryptjs.hash(password,12);
@@ -23,7 +23,7 @@ const signupcontroller=async(req,res)=>{
    }
 
 };
-const logincontroller=async(req,res)=>{
+const logincontroller=async(req,res,next)=>{
    try{
     const {email,password}=req.body;
     const finduser=await userModel.findOne({email:email})
