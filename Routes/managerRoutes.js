@@ -11,6 +11,6 @@ const{
 Router.get("/getAllEmployeeList",tokenValidator,validateMiddleware,checkAuth,checkRole("manager"),getAllEmployees)
 Router.post("/create",tokenValidator,validateMiddleware,checkAuth,checkRole("manager"),creteTicket);//task createing to managers
 Router.get("/allTickets",tokenValidator,validateMiddleware,checkAuth,checkRole("manager"),getAllTicket);
-Router.get("/getTicketById/:id",tokenValidator,validateMiddleware,checkAuth,checkRole("manager"),getTicketById);
+Router.get("/getTicketById/:ticketID",tokenValidator,validateMiddleware,checkAuth,checkRole("manager"),getTicketById);
 
 module.exports=Router;
