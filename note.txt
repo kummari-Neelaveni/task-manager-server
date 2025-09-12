@@ -1,4 +1,6 @@
 kummarineelaveni7_db_user
 password:Z8RKdouIzoKDYlSC
-connection string: ongodb+srv://kummarineelaveni7_db_user:<db_password>@task-manager.odk53lh.mongodb.net/
+mongodb+srv://kummarineelaveni7_db_user:<db_password>@task-manager.odk53lh.mongodb.net/?retryWrites=true&w=majority&appName=task-manager
+
+
 https://task-manager-server-5.onrender.com

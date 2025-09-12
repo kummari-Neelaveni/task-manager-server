@@ -29,7 +29,7 @@ exports.checkRole=(...roles)=>{
     return async(req,res,next)=>{
         console.log(roles,"roles");
         const checkUser=req.userInfo;
-        const data=await userModel.findById(checkUser.id).select("role")
+        const data=await userModel.findById(checkUser._id).select("role")
         if(roles.includes(data.role)){
             next()
         }
