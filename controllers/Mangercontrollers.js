@@ -56,7 +56,7 @@ exports.getTicketById=async(req,res,next)=>{
 };
 exports.getAllEmployees=async(req,res,next)=>{
      try {
-    const employees = await userModel.find().where({ role: "employees" });
+    const employees = await userModel.find().where({ role: "employee" });
     res.json({ message: "employees information", data: employees });
   } catch (error) {
     console.log(error);
