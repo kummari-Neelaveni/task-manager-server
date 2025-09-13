@@ -17,7 +17,7 @@ exports.viewAssignedTickets=async(req,res,next)=>{
 exports.updateTicketstatusById=async(req,res,next)=>{
      try {
     const { taskStatus } = req.body;
-    const taskId = req.params.ticketID;
+    const taskId = req.params.ticketId;
     const userId = req.userInfo._id;
     const task = await TaskModel.findByIdAndUpdate(
       taskId,
