@@ -7,7 +7,7 @@ const authschema=new mongoose.Schema({
     role:{type:String,
         enum:["manager","employee"],
         required:true,
-        default:"employee"},
+        default:"employee",},
     password:{type:String,required:true}  ,
     profilePic:{type:String} , 
 
